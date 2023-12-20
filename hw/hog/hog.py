@@ -26,7 +26,7 @@ def roll_dice(num_rolls, dice=six_sided):
     is_1 = 0
     for i in range(0, num_rolls):
         n = dice()
-        if (n == 1):
+        if n == 1:
             is_1 = 1          
         sum += n
     return is_1 or sum
