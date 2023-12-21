@@ -343,7 +343,14 @@ def final_strategy(score, opponent_score):
     *** YOUR DESCRIPTION HERE ***
     """
     # BEGIN PROBLEM 12
-    return 6  # Remove this line once implemented.
+    if sus_points(score + boar_brawl(score, opponent_score)) >= GOAL:
+        return 0
+    elif score > opponent_score and GOAL - score <= make_averaged(roll_dice)(1):
+        return 1
+    elif score > opponent_score and GOAL - score <= make_averaged(roll_dice)(2):
+        return 2
+    else:
+        return sus_strategy(score, opponent_score)
     # END PROBLEM 12
 
 
