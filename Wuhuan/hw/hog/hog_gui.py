@@ -1,8 +1,5 @@
 """Web server for the hog GUI."""
-import io
 import os
-import logging
-from contextlib import redirect_stdout
 
 from gui_files.common_server import route, start
 
